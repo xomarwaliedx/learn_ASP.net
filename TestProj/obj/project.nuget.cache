@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "awS8mWjfA2w=",
+  "success": true,
+  "projectFilePath": "/Users/omarwalid/Documents/Courses/Dotnet/git crud app/learn_ASP.net/TestProj/TestProj.csproj",
+  "expectedPackageFiles": [
+    "/Users/omarwalid/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.abstractions.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.analyzers.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.0-preview.1.24081.2/microsoft.entityframeworkcore.relational.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.caching.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.caching.memory/9.0.0-preview.1.24080.9/microsoft.extensions.caching.memory.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.configuration.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-preview.1.24080.9/microsoft.extensions.dependencyinjection.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.logging/9.0.0-preview.1.24080.9/microsoft.extensions.logging.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-preview.1.24080.9/microsoft.extensions.logging.abstractions.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.options/9.0.0-preview.1.24080.9/microsoft.extensions.options.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.extensions.primitives/9.0.0-preview.1.24080.9/microsoft.extensions.primitives.9.0.0-preview.1.24080.9.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/minimalapis.extensions/0.11.0/minimalapis.extensions.0.11.0.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/minivalidation/0.8.0/minivalidation.0.8.0.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
+    "/Users/omarwalid/.nuget/packages/pomelo.entityframeworkcore.mysql/9.0.0-preview.1/pomelo.entityframeworkcore.mysql.9.0.0-preview.1.nupkg.sha512"
+  ],
+  "logs": []
+}

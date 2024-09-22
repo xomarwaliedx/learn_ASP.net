@@ -1,0 +1,30 @@
+GET http://localhost:5291
+###
+GET http://localhost:5291/games
+###
+GET http://localhost:5291/games/3
+###
+POST http://localhost:5291/games
+Content-Type: application/json
+
+{
+  "name": "GTA V",
+  "Genre": "Action",
+  "Price": 50,
+  "releaseDate": "2013-09-17"
+}
+
+###
+PUT http://localhost:5291/games/4
+Content-Type: application/json
+
+{
+  "name": "GTA V",
+  "Genre": "Action",
+  "Price": 50,
+  "releaseDate": "2013-09-18"
+}
+
+###
+
+DELETE http://localhost:5291/games/4
