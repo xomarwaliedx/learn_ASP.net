@@ -4,7 +4,7 @@ namespace TestProj.DTOs;
 
 public record class UpdateGamedDto(
     [Required][StringLength(50)] string Name,
-    [Required][StringLength(20)] string Genre,
+    int GenreId,
     [Range(1,100)] decimal Price,
     DateOnly ReleaseDate
 );

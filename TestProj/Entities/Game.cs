@@ -1,6 +1,6 @@
 using System;
 
-namespace TestProj.Entities;
+namespace TestProj.Models;
 
 public class Game
 {

@@ -1,54 +1,55 @@
 using System;
+using Crud_App_3.Data;
 using TestProj.DTOs;
+using TestProj.Mapping;
+using TestProj.Models;
 
 namespace TestProj.EndPoints;
 
 public static class GamesEndpoints
 {
-    const string GetGameEndpontName = "GetGame";
+    const string GetGameEndpointName = "GetGame";
 
-    readonly static List<GameDto> games = new()
-    {
-        new GameDto(1, "Halo", "Shooter", 59.99m, new DateOnly(2001, 11, 15)),
-        new GameDto(2, "The Legend of Zelda: Breath of the Wild", "Action-adventure", 59.99m, new DateOnly(2017, 3, 3)),
-        new GameDto(3, "The Witcher 3: Wild Hunt", "Action role-playing", 39.99m, new DateOnly(2015, 5, 19))
-    };
 
     public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("games").WithParameterValidation();
 
-        group.MapGet("/", () => games);
+        group.MapGet("/", (AppDbContext dbContext) => Results.Ok(
+            dbContext.Game.Include(game=>game.Genre).Select(g => g.GameToGameSummaryDto()).AsNoTracking()));
 
-        group.MapGet("/{id}", (int id) => games.Find(g => g.Id == id) is GameDto game ? Results.Ok(game) : Results.NotFound()).WithName(GetGameEndpontName);
+        group.MapGet("/{id}", (int id, AppDbContext dbContext) => {
+        Game? game= dbContext.Game.Find(id);
+        return game is null?Results.NotFound():Results.Ok(game.GameToGameDetailsDto());
+        }).WithName(GetGameEndpointName);
 
-        group.MapPost("", (CreateGameDto game) =>
+        group.MapPost("", (CreateGameDto game, AppDbContext dbContext) =>
         {
-            var newGame = new GameDto(games.Count + 1, game.Name, game.Genre, game.Price, game.ReleaseDate);
-            games.Add(newGame);
-            return Results.CreatedAtRoute(GetGameEndpontName, new { id = newGame.Id }, newGame);
+            Game newGame=game.GameDtoToGame();
+            newGame.Genre=dbContext.Genre.Find(game.GenreId);
+            dbContext.Game.Add(newGame);
+            dbContext.SaveChanges();
+            
+            return Results.CreatedAtRoute(GetGameEndpointName, new { id = newGame.Id }, newGame.GameToGameSummaryDto());
         });
 
-        group.MapPut("/{id}", (int id, UpdateGamedDto game) =>
+        group.MapPut("/{id}", (int id, UpdateGamedDto game,AppDbContext dbContext) =>
         {
-            if (games.Find(g => g.Id == id) is not GameDto existingGame)
+            var existingGame = dbContext.Game.Find(id);
+            if (existingGame is null)
             {
                 return Results.NotFound();
             }
+            dbContext.Entry(existingGame).CurrentValues.SetValues(game.UpdateGameDtoToGame(existingGame.Id));
+            dbContext.SaveChanges();
 
-            var updatedGame = new GameDto(id, game.Name, game.Genre, game.Price, game.ReleaseDate);
-            games[games.IndexOf(existingGame)] = updatedGame;
-            return Results.Ok(updatedGame);
+            return Results.NoContent();
         });
 
-        group.MapDelete("/games/{id}", (int id) =>
+        group.MapDelete("/{id}", (int id,AppDbContext dbContext) =>
         {
-            if (games.Find(g => g.Id == id) is not GameDto existingGame)
-            {
-                return Results.NotFound();
-            }
+            dbContext.Game.Where(g=>g.Id==id).ExecuteDelete();
 
-            games.Remove(existingGame);
             return Results.NoContent();
         });
 
