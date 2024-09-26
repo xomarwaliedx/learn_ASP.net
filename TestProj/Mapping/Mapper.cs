@@ -47,5 +47,12 @@ namespace TestProj.Mapping
                 ReleaseDate = game.ReleaseDate
             };
         }
+
+        public static GenreDto GenreToGenreDto(this Genre genre){
+            return new GenreDto(
+                genre.Id,
+                genre.Name
+            );
+        }
     }
 }
