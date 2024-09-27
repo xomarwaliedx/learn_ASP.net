@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LdqQtBG5FUU=",
+  "dgSpecHash": "Rx6f/rj4X/M=",
   "success": true,
   "projectFilePath": "/Users/omarwalid/Documents/Courses/Dotnet/git crud app/learn_ASP.net/TestProj/TestProj.csproj",
   "expectedPackageFiles": [
+    "/Users/omarwalid/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/omarwalid/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/omarwalid/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/omarwalid/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

@@ -136,3 +136,4 @@
 /Users/omarwalid/Documents/Courses/Dotnet/git crud app/learn_ASP.net/TestProj/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/omarwalid/Documents/Courses/Dotnet/git crud app/learn_ASP.net/TestProj/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/omarwalid/Documents/Courses/Dotnet/git crud app/learn_ASP.net/TestProj/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/omarwalid/Documents/Courses/Dotnet/git crud app/learn_ASP.net/TestProj/bin/Debug/net8.0/AutoMapper.dll
